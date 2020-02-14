@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery.js"></script>
+</head>
+<body>
+    <script>
+//     $( document ).ready(function() {
+//         console.log( "ready!" );
+//     });
+//     $( window ).on( "load", function() {
+//         console.log( "window loaded" );
+//     });
+// </script>
+
+// <script>
+//     $( document ).ready(function() {
+//         console.log( "document loaded" );
+//     });
+ 
+
+var greet = function( person, message ) {
+  var greeting = 'Hello, ' + person + ' ' + message +'!';
+  console.log( greeting + ' ' );
+};
+
+// use the function to greet Jory, passing in her
+// name and the message we want to use
+greet( 'Jory', 'Welcome to JavaScript ANkit' );
+
+var addTwoNumbers = function(a, b) {
+  return a + b;
+};
+;
+console.log(addTwoNumbers(5, 9));
+
+
+var myFunction = function() {
+  var foo = 'bar';
+};
+
+myFunction();
+console.log( typeof foo );
+
+var person = {
+  firstName : 'Boaz',
+  lastName : 'Sender'
+};
+
+console.log( 'First name: ' + person.firstName+person.lastName );    
+console.log( 'Last name: ' + person[ 'lastName' ] ); 
+
+
+var person = {
+  firstName : 'Boaz',
+  lastName : 'Sender',
+  greet : function(name) {
+    console.log( 'Hi, ' + name );
+  }
+};
+
+person.greet( person.firstName );
+
+
+    </script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <center><h3>Form</h3></center>
+<form id="form1"  method="POST">
+
+    <div class="form-group">
+    Email: <input class="form-control" type="email" name="email" id="input2" >
+</div>
+<div class="form-group">
+    Password: <input class="form-control" type="password" name="password" id="password1">
+</div>
+<div class="form-group">
+    Confirm Password: <input class="form-control" type="password" name="password2" id="password2">
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" id="checkbox" value="1">
+    <label class="form-check-label" for="exampleCheck1">I Agree</label>
+</div>
+<div class="form-group">
+    <input class="form-control" type="submit" value="Submit" name="submit" id="submit">
+</div>  
+</form>
+
+</div>
+<script>
+
+$(document).ready(function() {
+
+
+    $("#submit").on('click', function() {
+
+
+    
+  
+  var email = $('#input2').val();
+  var password = $('#password1').val();
+  var password2 = $('#password2').val();
+  var checkbox = $('#checkbox').val();
+
+ 
+
+  if (email.length < 1) {
+    alert('email field is empty');
+  
+  }
+  else if (password.length < 1) {
+    alert('password field is empty');
+   
+  }
+  else if (password2 !== password) {
+    
+    
+  } 
+  
+  else if (!$("#checkbox").is(":checked")) {
+        alert("Please agree the terms and conditions");
+       
+    }
+    else{
+        alert('success');
+        
+    }
+   
+ 
+});
+
+    
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function validateForm() {
+//     if( !isValidEmailAddress( document.getElementById( 'input2' ).value ) ) { 
+//         // also before return you can add alert( 'your e-mail is invalid' ); 
+//         // or display message in form, etc...
+//         alert('sorry');
+//         return false;
+//      } else { 
+//      }
+//     }
+// $('#form1').on('submit', function()
+// {
+
+
+//     var form = $(this),
+//     url = form.attr('action'),
+//     method = form.attr('method')
+    
+
+
+// });
+//      }
+    
+// $(document).ready(function() { 
+//     $('#form1').on('submit', function() { 
+//                 var x = $("form").serializeArray(); 
+//                 $.each(x, function(i, field) { 
+//                     $("#output").append(field.name + ":" 
+//                             + field.value + " "); 
+//                 }); 
+//             }); 
+//         }); 
+
+
+</script>
+
+</form>
+</body>
+
+
+
+</html>

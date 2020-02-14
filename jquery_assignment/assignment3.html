@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery.js"></script>
+</head>
+<body>
+
+<ol>
+
+<li><a href="#" id="anchor" >click me</a></li>
+<br>
+<li><a href="#" id="anchor1" >move mouse over me</a></li>
+<br>
+<li><a href="" id="anchor2" >focous</a></li>
+<br>
+<li><a href="#" id="anchor3" >mouse over</a></li>
+<br>
+<li><a href="#" id="anchor4" >focus in & focus out</a></li>
+<br>
+<li><a href="#" id="anchor5" >Doubble click</a></li>
+<br>
+<li><a href="#" id="anchor6" >Blur</a></li>
+<br>
+<li><a href="#" id="anchor7" >Mouse down</a></li>
+<br>
+<li><a href="#" id="anchor8" >Mouse enter</a></li>
+<br>
+<li><a href="#" id="anchor9" >Mouse leave</a></li>
+<br>
+<li><a href="#" id="anchor10" >event.preventDefault</a></li>
+</ol>
+    <script>
+$(document).ready(function() {
+
+
+$("#anchor").on('click', function() {
+alert('You just click on me');
+
+
+});
+
+$("#anchor1").hover(function(){
+  alert("you just move pointer over me");
+},
+function(){
+    alert("you just clicked on ok to see this message");
+}); 
+
+$("#anchor2").focus(function(){
+  alert("you j");
+}); 
+
+$("#anchor3").mouseover(function(){
+    alert("you just move pointer over me via mouseover function");
+  });
+  $("#anchor3").mouseout(function(){
+    alert("you just move pointer over me via mouseout function");
+  });
+
+  $("#anchor4").focusin(function(){
+    alert("clicked on focousin");
+  });
+  $("#anchor4").focusout(function(){
+    alert("focusout");
+  });
+
+
+$("#anchor5").dblclick(function(){
+  alert("you dubbled clickdj");
+}); 
+
+$("#anchor6").blur(function(){
+    alert("you clicked somewhere else to see message.");
+  });
+  $("#anchor7").mousedown(function(){
+    alert("you moved mouse down.");
+  });
+  $("#anchor8").mouseenter(function(){
+    alert("you moved mouse.");
+  });
+  $("#anchor9").mouseleave(function(){
+    alert("mouse leave.");
+  });
+  $("#anchor10").click(function(event){
+    event.preventDefault();
+  });
+});
+
+
+    </script>
+</body>
+
+
+
+</html>
